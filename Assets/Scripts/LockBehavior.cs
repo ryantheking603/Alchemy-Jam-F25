@@ -1,10 +1,9 @@
 using UnityEngine;
 
-public class KeyBehavior : MonoBehaviour
+public class LockBehavior : MonoBehaviour
 {
-    public static bool KeyClaimed {get; private set;}
     [SerializeField] private AudioClip audioClip;
-    
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,9 +16,9 @@ public class KeyBehavior : MonoBehaviour
         
     }
 
-    void OnTriggerEnter2D(Collider2D collideInfo)
+    void OnCollisionEnter2D(Collision2D collisionInfo)
     {
-        if (collideInfo.gameObject.CompareTag("Player"))
+        if (KeyBehavior.KeyClaimed)
         {
             if (audioClip)
             {
@@ -29,7 +28,6 @@ public class KeyBehavior : MonoBehaviour
             {
                 Debug.Log("No audio clip given");
             }
-            KeyClaimed = true;
             Destroy(gameObject);
         }
     }

@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class BackgroundChanger : MonoBehaviour
 {
-    [SerializeField]
     private Camera camera;
     [SerializeField]
     private Color[] colors;

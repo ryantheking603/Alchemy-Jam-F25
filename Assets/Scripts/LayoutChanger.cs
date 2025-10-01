@@ -2,10 +2,11 @@ using UnityEngine;
 
 public class LayoutChanger : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject[] layouts;
-    [SerializeField]
-    private int layoutIndex;
+    [SerializeField] private GameObject[] layouts;
+    [SerializeField] private int layoutIndex;
+    [SerializeField] private Color bgColor;
+    [SerializeField] private AudioClip audioClip;
+    private Camera camera;
     
     [Header ("Button Sprites")]
     [SerializeField] private GameObject buttonUp;
@@ -14,7 +15,7 @@ public class LayoutChanger : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        camera = Camera.main;
     }
 
     // Update is called once per frame
@@ -32,7 +33,16 @@ public class LayoutChanger : MonoBehaviour
                 layout.SetActive(false);
             }
             layouts[layoutIndex].SetActive(true);
+            camera.backgroundColor = bgColor;
             SetButtonDown();
+            if (audioClip)
+            {
+                AudioSource.PlayClipAtPoint(audioClip, new Vector3(0, 0, 0));
+            }
+            else
+            {
+                Debug.Log("No audio clip given");
+            }
         }
     }
 

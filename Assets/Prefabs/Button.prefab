@@ -184,6 +184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8513792354546371834}
   - component: {fileID: 6311424748008519524}
+  - component: {fileID: 3416022314212585053}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -225,3 +226,42 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   layoutIndex: 0
+  bgColor: {r: 0, g: 0, b: 0, a: 0}
+  buttonUp: {fileID: 0}
+  buttonDown: {fileID: 0}
+--- !u!58 &3416022314212585053
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8817675803569981504}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.1

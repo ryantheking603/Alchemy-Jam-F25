@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerDamage : MonoBehaviour
 {
+    [SerializeField] private AudioClip audioClip;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,6 +24,14 @@ public class PlayerDamage : MonoBehaviour
             if (levelManager)
             {
                 levelManager.ReloadScene();
+                if (audioClip)
+                {
+                    AudioSource.PlayClipAtPoint(audioClip, new Vector3(0, 0, 0));
+                }
+                else
+                {
+                    Debug.Log("No audio clip given");
+                }
             }
             else
             {
