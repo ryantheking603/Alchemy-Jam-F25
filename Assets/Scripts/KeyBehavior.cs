@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class KeyBehavior : MonoBehaviour
 {
+    public static bool KeyClaimed {get; private set;}
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,6 +20,7 @@ public class KeyBehavior : MonoBehaviour
     {
         if (collideInfo.gameObject.CompareTag("Player"))
         {
+            KeyClaimed = true;
             Destroy(gameObject);
         }
     }

@@ -4,7 +4,12 @@ public class LayoutChanger : MonoBehaviour
 {
     [SerializeField]
     private GameObject[] layouts;
+    [SerializeField]
     private int layoutIndex;
+    
+    [Header ("Button Sprites")]
+    [SerializeField] private GameObject buttonUp;
+    [SerializeField] private GameObject buttonDown;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -20,10 +25,31 @@ public class LayoutChanger : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collideInfo)
     {
-        foreach (GameObject layout in layouts)
+        if (collideInfo.gameObject.CompareTag("Player"))
         {
-            layout.SetActive(false);
+            foreach (GameObject layout in layouts)
+            {
+                layout.SetActive(false);
+            }
+            layouts[layoutIndex].SetActive(true);
+            SetButtonDown();
         }
-        layouts[layoutIndex].SetActive(true);
+    }
+
+    void OnTriggerExit2D(Collider2D collideInfo)
+    {
+        SetButtonUp();
+    }
+
+    void SetButtonUp()
+    {
+        buttonUp.SetActive(true);
+        buttonDown.SetActive(false);
+    }
+
+    void SetButtonDown()
+    {
+        buttonUp.SetActive(false);
+        buttonDown.SetActive(true);
     }
 }

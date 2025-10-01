@@ -20,5 +20,10 @@ public class PlayerMovement : MonoBehaviour
         float yInput = Input.GetAxis("Vertical");
         Vector2 direction = new Vector2(xInput, yInput).normalized;
         body.linearVelocity = direction * speed;
+
+        if (xInput == 0 && yInput == 0)
+        {
+            body.linearVelocity = Vector2.zero;
+        }
     }
 }
