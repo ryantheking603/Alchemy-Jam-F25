@@ -644,6 +644,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 966402895}
     - target: {fileID: 6311424748008519524, guid: e869b1d5800504beb91003883710f6c2, type: 3}
+      propertyPath: audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1165d508033a246b285429e00cf9aab1, type: 3}
+    - target: {fileID: 6311424748008519524, guid: e869b1d5800504beb91003883710f6c2, type: 3}
       propertyPath: bgColor.b
       value: 0.3372549
       objectReference: {fileID: 0}
@@ -2315,8 +2319,8 @@ Tilemap:
   - first: {x: 6, y: 0, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 5
-      m_TileSpriteIndex: 5
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2342,9 +2346,9 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 3
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 436b1cbc3817c46499c35ed63ec4ddf1, type: 2}
+  - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: f2571d24990cb41189da134e48e5861c, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
@@ -2355,9 +2359,9 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 3
+  - m_RefCount: 1
+    m_Data: {fileID: 4024540938494748314, guid: 5a39f00f33d524989befbb72666aa3fa, type: 3}
+  - m_RefCount: 2
     m_Data: {fileID: 21300000, guid: 6288eaf51acb745b286955a20213544a, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 3
@@ -2417,7 +2421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5262c542d08a24d5aa562558efc85760, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: a4bbc18dfdf3b4819b1df5db8175715a, type: 3}
 --- !u!1 &1568872223 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3697808015467558983, guid: e869b1d5800504beb91003883710f6c2, type: 3}
@@ -2793,6 +2797,10 @@ PrefabInstance:
       propertyPath: buttonUp
       value: 
       objectReference: {fileID: 1885294304}
+    - target: {fileID: 6311424748008519524, guid: e869b1d5800504beb91003883710f6c2, type: 3}
+      propertyPath: audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1165d508033a246b285429e00cf9aab1, type: 3}
     - target: {fileID: 6311424748008519524, guid: e869b1d5800504beb91003883710f6c2, type: 3}
       propertyPath: bgColor.b
       value: 0.81960785
@@ -3609,12 +3617,8 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6863789688440069814, guid: c2072b26bb9f74f5993ee774b8731312, type: 3}
-      propertyPath: screenFlash
-      value: 
-      objectReference: {fileID: 1202025866}
-    - target: {fileID: 6863789688440069814, guid: c2072b26bb9f74f5993ee774b8731312, type: 3}
       propertyPath: loadWaitTime
-      value: 0.25
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 6863789688440069814, guid: c2072b26bb9f74f5993ee774b8731312, type: 3}
       propertyPath: nextSceneName
@@ -3738,6 +3742,10 @@ PrefabInstance:
       propertyPath: buttonUp
       value: 
       objectReference: {fileID: 1568872223}
+    - target: {fileID: 6311424748008519524, guid: e869b1d5800504beb91003883710f6c2, type: 3}
+      propertyPath: audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1165d508033a246b285429e00cf9aab1, type: 3}
     - target: {fileID: 6311424748008519524, guid: e869b1d5800504beb91003883710f6c2, type: 3}
       propertyPath: bgColor.b
       value: 0.3372549

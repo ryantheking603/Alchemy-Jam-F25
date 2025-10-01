@@ -7,20 +7,17 @@ public class LevelManager : MonoBehaviour
     [Header ("Scenes")]
     public string nextSceneName;
 
-    //[SerializeField] private GameObject screenFlash;
-
     [SerializeField] private float loadWaitTime;
+    [SerializeField] private bool finalScene;
     private IEnumerator coroutine;
-    //private ScreenFlashBehavior screenFlashBehavior;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        /*screenFlashBehavior = screenFlash.GetComponent<ScreenFlashBehavior>();
-        if (!screenFlashBehavior)
+        if (finalScene)
         {
-            Debug.Log("No Screen Flash Found");
-        }*/
+            loadWaitTime = 3;
+        }
     }
 
     // Update is called once per frame
@@ -30,7 +27,12 @@ public class LevelManager : MonoBehaviour
         {
             ReloadScene();
         }
-        if (Input.GetKeyDown("q"))
+        if (Input.GetKeyDown("f"))
+        {
+            LoadNextLevel();
+        }
+
+        if (finalScene && KeyBehavior.KeyClaimed)
         {
             LoadNextLevel();
         }
@@ -46,7 +48,6 @@ public class LevelManager : MonoBehaviour
         Scene scene = SceneManager.GetActiveScene();
         coroutine = WaitAndReload(loadWaitTime, scene.name);
         ScreenFlashBehavior.ShouldFlash = true;
-        //screenFlashBehavior.FlashScreen();
         StartCoroutine(coroutine);
     }
 
@@ -56,7 +57,6 @@ public class LevelManager : MonoBehaviour
         if (nextSceneName.Length > 0)
         {
             ScreenFlashBehavior.ShouldFlash = true;
-            //screenFlashBehavior.FlashScreen();
             StartCoroutine(coroutine);
         }
         else
